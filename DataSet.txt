@@ -1,0 +1,16 @@
+The details of dataset could be found in the report.
+
+
+The data is collected from the huge data dumps those are already available in wikimedia sites (https://dumps.wikimedia.org/enwiki/). 
+The dumps for different language versions of Wik-ipedia are kept separate. It is important to note that the data are available in XML format 
+(some previous version have SQL and HTML dumps too but are out of date) and needed to be trans-formed into more readable format. 
+So I had to execute a Java tool that is already available called mwdumper that converts the XML to SQL. 
+Some other tools such as mwdump.py, ImportDump.php, xml2sql (https://meta.wikimedia.org/wiki/Data_dumps/Tools_for_importing) are also available. 
+But con-sidering the huge size of English wiki dump, mwdumper is the best solution that generates the script without getting crashed.
+
+For the sake of the study and brevity of analysis, the dataset used was ‘enwikisource-20160305-pages-meta-history.xml’ (https://dumps.wikimedia.org/enwiki/) combined 
+with another dump of Bengali Wikipedia ‘bnwikibooks-20160407-pages-meta-history.xml’ from another timeframe.
+
+For some small scale analysis, WIkipedia API was used:
+https://www.mediawiki.org/wiki/API:Main_page
+https://www.mediawiki.org/wiki/API:Users
